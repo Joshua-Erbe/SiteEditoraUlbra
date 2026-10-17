@@ -6,4 +6,4 @@ Esse projeto é um trabalho de facul focado no FrontEnd para aprendizado do Boot
 
 * HTML
 * CSS
-* BOOTSTRAP
+* BOOTSTRAPpush
