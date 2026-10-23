@@ -1,13 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editora Illuminare</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editora Illumina</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Hello!</h1>
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Editora Illumina</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="catalogo.html#romance">Romance</a></li>
+                <li><a class="dropdown-item" href="catalogo.html#ficcao">Ficção</a></li>
+                <li><a class="dropdown-item" href="catalogo.html#nao-ficcao">Não ficção</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+
+    <section aria-label="Destaques em carrossel">
+      <div id="carouselDestaques" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/seed/editora1/1600/600" class="d-block w-100 carousel-img" alt="Imagem de lançamento de romance">
+            <div class="carousel-caption">
+              <h2 class="h3">Lançamentos da temporada</h2>
+              <p class="d-none d-md-block">Romances que vão prender você do primeiro ao último capítulo.</p>
+              <a href="catalogo.html#romance" class="btn btn-warning">Ver romances</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/seed/editora2/1600/600" class="d-block w-100 carousel-img" alt="Imagem de livros de não ficção">
+            <div class="carousel-caption">
+              <h2 class="h3">Não ficção em destaque</h2>
+              <p class="d-none d-md-block">Histórias reais, ciência e ideias para transformar o seu olhar.</p>
+              <a href="catalogo.html#nao-ficcao" class="btn btn-warning">Ver não ficção</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/seed/editora3/1600/600" class="d-block w-100 carousel-img" alt="Imagem de clássicos reeditados">
+            <div class="carousel-caption">
+              <h2 class="h3">Clássicos reeditados</h2>
+              <p class="d-none d-md-block">Edições especiais com capa dura e posfácio exclusivo.</p>
+              <a href="catalogo.html#ficcao" class="btn btn-warning">Ver ficção</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <h2 class="text-center mb-2">Bem-vindo à Illumina</h2>
+      <p class="text-center text-muted mx-auto" style="max-width: 680px;">
+        Somos uma editora independente dedicada a levar boas histórias e conhecimento para leitores de todas as idades.
+        Explore nosso catálogo e encontre o seu próximo livro.
+      </p>
+    </section>
+
+    <section class="bg-white py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Destaques da semana</h2>
+        <div class="destaques d-flex flex-wrap justify-content-center gap-4">
+          <article class="card card-livro shadow-sm">
+            <img src="https://picsum.photos/seed/capa1/400/560" class="card-img-top" alt="Capa do livro Ventos de Setembro">
+            <div class="card-body">
+              <h3 class="h5 card-title">Ventos de Setembro</h3>
+              <p class="card-text text-muted small">Helena Vasconcelos</p>
+              <a href="catalogo.html#romance" class="btn btn-outline-primary btn-sm">Ver romance</a>
+            </div>
+          </article>
+          <article class="card card-livro shadow-sm">
+            <img src="https://picsum.photos/seed/capa2/400/560" class="card-img-top" alt="Capa do livro O Mapa das Estrelas">
+            <div class="card-body">
+              <h3 class="h5 card-title">O Mapa das Estrelas</h3>
+              <p class="card-text text-muted small">Rafael Montenegro</p>
+              <a href="catalogo.html#ficcao" class="btn btn-outline-primary btn-sm">Ver ficção</a>
+            </div>
+          </article>
+          <article class="card card-livro shadow-sm">
+            <img src="https://picsum.photos/seed/capa3/400/560" class="card-img-top" alt="Capa do livro Pequeno Manual de Hábitos">
+            <div class="card-body">
+              <h3 class="h5 card-title">Pequeno Manual de Hábitos</h3>
+              <p class="card-text text-muted small">Luiza Andrade</p>
+              <a href="catalogo.html#nao-ficcao" class="btn btn-outline-primary btn-sm">Ver não ficção</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-light py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">&copy; 2026 Editora Illumina. Todos os direitos reservados para Joshua Erbe.</p>
+      <p class="mb-0 small">joshuae2b3@gmail.com</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
