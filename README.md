@@ -1,4 +1,4 @@
-# Documentação – Projeto Web com Bootstrap 5
+Projeto Web com Bootstrap 5
 
 ## 1. Tema escolhido
 
